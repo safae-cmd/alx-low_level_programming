@@ -1,14 +1,14 @@
 #include <stdio.h>
 
-/**first code
- * main prints a sentence
+/**
+ *main - prints output
+ *Return: (O)
  */
-
 int main(void)
 {
 	char str[] = "\"Programming is like building a multilingual puzzle";
 
-	puts(str);	
-	
+	puts(str);
+
 	return (0);
-}	
+}
