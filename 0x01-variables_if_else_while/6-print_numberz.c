@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
  * main - base 10
- * Return numbers
+ * Return: numbers
  */
 int main(void)
 {
