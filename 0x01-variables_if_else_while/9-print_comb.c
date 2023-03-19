@@ -18,10 +18,6 @@ int main(void)
 				putchar(',');
 				putchar(' ');
 			}
-			else
-			{
-				continue;
-			}
 		}
 	}
 	putchar('\n');
