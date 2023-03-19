@@ -5,18 +5,23 @@
  */
 int main(void)
 {
-	int i;
+	int i, j;
 
 	for (i = 0; i < 10; i++)
 	{
-		putchar('0' + i);
-		if (i < 9)
-		{	putchar(',');
-			putchar(' ');
-		}
-		else
+		for (j = i + 1; j < 10; j++)
 		{
-			continue;
+			putchar('0' + i);
+			putchar('0' + j);
+			if (i != 8)
+			{
+				putchar(',');
+				putchar(' ');
+			}
+			else
+			{
+				continue;
+			}
 		}
 	}
 	putchar('\n');
