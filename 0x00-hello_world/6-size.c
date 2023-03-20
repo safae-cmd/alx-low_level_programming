@@ -20,7 +20,9 @@ int main(void)
 
 	printf("Size of a long long int: %lu byte(s)\n", (unsigned long)sizeof(l));
 
-	printf("Size of a float: %lu byte(s)\n", (unsigned long)sizeof(m));
+	printf("Size of a float: %lu byte(s)", (unsigned long)sizeof(m));
+
+	printf("\n");
 
 	return (0);
 }
