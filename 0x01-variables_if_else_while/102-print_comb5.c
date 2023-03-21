@@ -9,6 +9,11 @@ int main(void)
 
 	for (i = 0; i <= 99; i++)
 	{
+		for (j = 0; j <= 99; j++)
+		{
+			putchar('0' + i / 10);
+
+
 		for (j = i + 1; j <= 99; j++)
 		{
 			putchar('0' + i / 10);
@@ -22,3 +27,4 @@ int main(void)
 	putchar('\n');
 	return (0);
 }
+
