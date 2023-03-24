@@ -1,4 +1,5 @@
 #include "main.h"
+#include <unistd.h>
 
 /**
  * more_numbers - prints numbers from 0 to 14
@@ -16,12 +17,13 @@ void more_numbers(void)
 			{
 				_putchar(j + '0');
 			}
-			else
+			else if (j >= 10)
 			{
 				_putchar((j / 10) + '0');
 				_putchar((j % 10) + '0');
 			}
 		}
-	_putchar('\n');
+	write(1, "\n", 2);
+
 	}
 }
