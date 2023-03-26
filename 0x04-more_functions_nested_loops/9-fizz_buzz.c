@@ -16,20 +16,20 @@ int main(void)
 			printf("FizzBuzz ");
 			continue;
 		}
+		else if (i % 3 == 0 && i % 5 != 0)
+		{
+			printf("Fizz ");
+			continue;
+		}
+		else if (i % 5 == 0 && i % 3 != 0)
+		{
+			printf("Buzz ");
+			continue;
+		}
 		else
 		{
-			if (i % 3 == 0)
-			{
-				printf("Fizz ");
-				continue;
-			}
-			else if (i % 5 == 0)
-			{
-				printf("Buzz ");
-				continue;
-			}
+			printf("%d ", i);
 		}
-		printf("%d ", i);
 	}
 	printf("\n");
 	return (0);
