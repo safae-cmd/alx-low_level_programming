@@ -9,20 +9,22 @@
  */
 int _strcmp(char *s1, char *s2)
 {
-	int a, b;
+	int a, b, result;
 
 	a = strlen(s1);
 	b = strlen(s2);
-	if (a > b)
+	result = a - b;
+	if (result > 0)
 	{
 		return (15);
 	}
-	else if (a < b)
+	else if (result < 0)
 	{
 		return (-15);
 	}
-	else
+	else if (result == 0)
 	{
 		return (0);
 	}
+	return (0);
 }
