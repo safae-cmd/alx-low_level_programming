@@ -13,10 +13,9 @@ char *_strcat(char *dest, char *src)
 	int n;
 
 	n = strlen(dest);
-	dest[n] = ' ';
 	for (i = 0; i <= n; i++)
 	{
 		dest[n + i] = src[i];
 	}
-	return (&dest[n + i]);
+	return (dest);
 }
