@@ -18,7 +18,11 @@ void init_dog(struct dog *d, char *name, float age, char *owner)
 	{
 		i++;
 	}
-	d->name = malloc(sizeof(char) * i + 1);
+	d->name = malloc(sizeof(char) * (i + 1));
+	if (d->name == NULL)
+	{
+		exit(EXIT_FAILURE);
+	}
 	for (i = 0; name[i] != '\0'; i++)
 	{
 		d->name[i] = name[i];
@@ -30,7 +34,12 @@ void init_dog(struct dog *d, char *name, float age, char *owner)
 	{
 		i++;
 	}
-	d->owner = malloc(sizeof(char) * i + 1);
+	d->owner = malloc(sizeof(char) * (i + 1));
+	if (d->owner == NULL)
+	{
+		free(d->name);
+		exit(EXIT_FAILURE);
+	}
 	for (i = 0; owner[i] != '\0'; i++)
 	{
 		d->owner[i] = owner[i];
