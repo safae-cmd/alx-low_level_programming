@@ -1,5 +1,6 @@
-#ifndef HEADER_FILE_NAME_H
-#define HEADER_FILE_NAME_H
+#include "main.h"
+#ifndef DOG_H
+#define DOG_H
 /**
  * struct dog - struct
  * @name: name
