@@ -1,6 +1,7 @@
 #include "dog.h"
 #include <stdlib.h>
-
+#define MAX_N 20
+#define MAX_O 20
 /**
  * init_dog - initializes a struct type variable
  * @d: struct
