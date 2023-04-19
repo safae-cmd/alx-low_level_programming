@@ -10,30 +10,40 @@
  */
 void print_dog(struct dog *d)
 {
-	char *name, *owner;
-	float age;
+	int k;
 
-	int i;
-
-	i = 0;
-	while (name[i] != '\0')
-		i++;
-	d->name = malloc(sizeof(char) * (i + 1));
-	if (d->name == NULL)
-		printf("Name: (nil)\n");
-	else
+	k = 0;
+	if (d->name != NULL)
+	{
+		while (d->name[k] != '\0')
+		{
+			k++;
+		}
 		printf("Name: %s\n", d->name);
-	d->age = age;
-	if (d->age == 0)
-		printf("Age: (nil)\n");
+	}
 	else
+	{
+		printf("Name: (nil)\n");
+	}
+	if (d->age != 0)
+	{
 		printf("Age: %f\n", d->age);
-	i = 0;
-	while (owner[i] != '\0')
-		i++;
-	d->owner = malloc(sizeof(char) * (i + 1));
-	if (d->owner == NULL)
-		printf("Owner: (nil)\n");
+	}
 	else
+	{
+		printf("Age: (nil)\n");
+	}
+	k = 0;
+	if (d->owner != NULL)
+	{
+		while (d->owner[k] != '\0')
+		{
+			k++;
+		}
 		printf("Owner: %s\n", d->owner);
+	}
+	else
+	{
+		printf("Owner: (nil)\n");
+	}
 }
