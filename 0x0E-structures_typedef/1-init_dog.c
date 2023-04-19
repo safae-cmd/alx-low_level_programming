@@ -1,10 +1,10 @@
-#include "dog.h"
+#include <stdio.h>
 #include <stdlib.h>
-#define MAX_N 20
-#define MAX_O 20
+#include "main.h"
+
 /**
- * init_dog - initializes a struct type variable
- * @d: struct
+ * init_dog - initializes a variable type
+ * @d: struct pointer variable
  * @name: name
  * @age: age
  * @owner: owner
@@ -12,38 +12,36 @@
  */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	int i;
+	int i, j, k, l;
 
 	i = 0;
 	while (name[i] != '\0')
 	{
 		i++;
 	}
+	j = 0;
+	while (owner[j] != '\0')
+	{
+		j++;
+	}
 	d->name = malloc(sizeof(char) * (i + 1));
 	if (d->name == NULL)
 	{
-		exit(EXIT_FAILURE);
+		exit(1);
 	}
-	for (i = 0; name[i] != '\0'; i++)
-	{
-		d->name[i] = name[i];
-	}
-	d->name[i] = '\0';
-	d->age = age;
-	i = 0;
-	while (owner[i] != '\0')
-	{
-		i++;
-	}
-	d->owner = malloc(sizeof(char) * (i + 1));
+	d->owner = malloc(sizeof(char) * (j + 1));
 	if (d->owner == NULL)
 	{
 		free(d->name);
-		exit(EXIT_FAILURE);
+		exit(1);
 	}
-	for (i = 0; owner[i] != '\0'; i++)
+	for (k = 0; k <= i; k++)
 	{
-		d->owner[i] = owner[i];
+		d->name[k] = name[k];
 	}
-	d->owner[i] = '\0';
+	d->age = age;
+	for (l = 0; l <= j; l++)
+	{
+		d->owner[l] = owner[l];
+	}
 }
