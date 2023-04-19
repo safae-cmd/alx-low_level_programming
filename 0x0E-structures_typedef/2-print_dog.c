@@ -10,40 +10,24 @@
  */
 void print_dog(struct dog *d)
 {
-	int k;
-
-	k = 0;
-	if (d->name != NULL)
+	if (d)
 	{
-		while (d->name[k] != '\0')
+		if (d->name)
 		{
-			k++;
+			printf("Name: %s\n", d->name);
 		}
-		printf("Name: %s\n", d->name);
-	}
-	else
-	{
-		printf("Name: (nil)\n");
-	}
-	if (d->age != 0)
-	{
+		else
+		{
+			printf("Name: (nil)\n");
+		}
 		printf("Age: %f\n", d->age);
-	}
-	else
-	{
-		printf("Age: (nil)\n");
-	}
-	k = 0;
-	if (d->owner != NULL)
-	{
-		while (d->owner[k] != '\0')
+		if (d->owner)
 		{
-			k++;
+			printf("Owner: %s\n", d->owner);
 		}
-		printf("Owner: %s\n", d->owner);
-	}
-	else
-	{
-		printf("Owner: (nil)\n");
+		else
+		{
+			printf("Owner: (nil)\n");
+		}
 	}
 }
