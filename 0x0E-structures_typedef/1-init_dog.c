@@ -14,7 +14,7 @@ void init_dog(struct dog *d, char *name, float age, char *owner)
 {
 	int i, j, k, l;
 
-	if (d)
+	if (d != NULL)
 	{
 		i = 0;
 		while (name[i] != '\0')
