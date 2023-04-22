@@ -37,11 +37,13 @@ void print_all(const char * const format, ...)
 				printf("%s", d);
 				break;
 		}
-		if (format[i] != '\0' && (format[i] == 'c'
-			|| format[i] == 'i' || format[i] == 'f'))
+		if (format[i + 1] != '\0' && (format[i] == 'c'
+				|| format[i] == 'i' || format[i] == 'f'))
+		{
 			printf(", ");
+		}
 		i++;
 	}
-	va_end(ap);
 	printf("\n");
+	va_end(ap);
 }
