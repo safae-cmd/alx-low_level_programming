@@ -9,7 +9,7 @@ void _printfunction(void)  __attribute__((constructor));
  */
 void _printfunction(void)
 {
-	list_t text = {"You're beat! and yet, you must allow,\n
-		I bore my house upon my back!\n", 35, NULL};
+	list_t text = {"You're beat! and yet, you must allow,\n"
+		"I bore my house upon my back!\n", 74, NULL};
 	printf("%s", text.str);
 }
