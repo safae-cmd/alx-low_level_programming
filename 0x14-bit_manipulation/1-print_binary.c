@@ -3,14 +3,16 @@
 /**
  * print_binary - prints the binary representation of a number
  * @n: number
- * @Return: void
+ * Return: void
  */
 void print_binary(unsigned long int n)
 {
-	unsigned long int number = (unsigned long int) 1 << ((sizeof(unsigned long int) * 8) - 1);
-	while (number > 0)
+	unsigned long int num;
+
+	num = 1 << ((sizeof(unsigned long int) * 8) - 1);
+	while (num > 0)
 	{
-		if (n & number)
+		if (n & num)
 		{
 			_puthcar('1');
 		}
@@ -18,6 +20,6 @@ void print_binary(unsigned long int n)
 		{
 			_putchar('0');
 		}
-		number >>= 1;
+		num >>= 1;
 	}
 }
