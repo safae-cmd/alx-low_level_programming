@@ -9,6 +9,7 @@ size_t print_dlistint(const dlistint_t *h)
 {
 	int i;
 	const dlistint_t *p;
+
 	p = h;
 	i = 1;
 	while (p)
